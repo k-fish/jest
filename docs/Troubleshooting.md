@@ -25,6 +25,12 @@ The Chrome Developer Tools will be displayed, and a breakpoint will be set at th
 
 > Note: the `--runInBand` cli option makes sure Jest runs test in the same process rather than spawning processes for individual tests. Normally Jest parallelizes test runs across processes but it is hard to debug many processes at the same time.
 
+## Debugging with ndb
+If you are frequently debugging from the commandline you may also consider using [ndb](https://github.com/GoogleChromeLabs/ndb), which was developed by GoogleChromeLabs to provide an improved debugging experience for node.js. Running the following command will open DevTools for you.
+```
+ndb node_modules/.bin/jest --runInBand (any other arguments here)
+```
+
 ## Debugging in VS Code
 
 There are multiple ways to debug Jest tests with [Visual Studio Code's](https://code.visualstudio.com) built in [debugger](https://code.visualstudio.com/docs/nodejs/nodejs-debugging).
